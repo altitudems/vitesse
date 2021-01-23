@@ -1,0 +1,26 @@
+{
+	"name": "Vitesse",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": { "VARIANT": "14" }
+	},
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/zsh"
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+    "johnsoncodehk.volar",
+    "lokalise.i18n-ally",
+    "antfu.iconify",
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss"
+	],
+	
+	"forwardPorts": [3333],
+
+  "postCreateCommand": "pnpm install",
+	"remoteUser": "node"
+}
